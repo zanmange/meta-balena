@@ -54,7 +54,7 @@ INSANE_SKIP_${PN} += "already-stripped"
 FILES_${PN} += " \
 	/lib/systemd/system/* \
 	/home/root \
-	/boot/storage-driver \
+	/boot/init \
 	${localstatedir} \
 	"
 
@@ -120,7 +120,7 @@ do_install() {
 	mkdir -p ${D}/${bindir}
 	install -m 0755 ${S}/src/import/bundles/dynbinary-balena/balena-engine ${D}/${bindir}/balena-engine
 	install -d ${D}/boot
-	echo ${BALENA_STORAGE} > ${D}/boot/storage-driver
+	install -m 0755 ${S}/src/import/cmd/mobynit/mobynit ${D}/boot/init
 
 	ln -sf balena-engine ${D}/${bindir}/balena
 	ln -sf balena-engine ${D}/${bindir}/balenad
