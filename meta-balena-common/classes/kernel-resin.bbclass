@@ -156,6 +156,8 @@ RESIN_CONFIGS[aufs] = " \
 
 RESIN_CONFIGS[overlay2] = " \
     CONFIG_OVERLAY_FS=y \
+    CONFIG_AUFS_FS=y \
+    CONFIG_AUFS_XATTR=y \
     "
 
 #
@@ -679,7 +681,7 @@ kernel_resin_aufs_fetch_and_unpack[vardeps] += "BALENA_STORAGE"
 # copy needed aufs files and apply aufs patches
 apply_aufs_patches () {
     # bail out if it looks like the kernel source tree already has the fs/aufs directory
-    if [ -d ${S}/fs/aufs ] || [ "${BALENA_STORAGE}" != "aufs" ]; then
+    if [ -d ${S}/fs/aufs ]; then
         exit
     fi
     cp -r ${WORKDIR}/aufs_standalone/Documentation ${WORKDIR}/aufs_standalone/fs ${S}
