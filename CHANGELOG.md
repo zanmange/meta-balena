@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.41.0
+## (2019-08-22)
+
+* Update balena-engine to 18.09.8 [Robert Günzler]
+
 # v2.40.0
 ## (2019-08-14)
 

@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena-engine to 18.09.8
+      hash: 9bcd0ffcc7d6efde45f2bc1eaeaafe1092374c40
+      body: |
+        Includes improvements and fixes to the journald logdriver
+      footer:
+        Change-type: minor
+        change-type: minor
+        Changelog-entry: Update balena-engine to 18.09.8
+        changelog-entry: Update balena-engine to 18.09.8
+        Signed-off-by: Robert Günzler <robertg@balena.io>
+        signed-off-by: Robert Günzler <robertg@balena.io>
+      author: Robert Günzler
+  version: 2.41.0
+  date: 2019-08-22T12:25:24.185Z
+- commits:
     - subject: Update balena-supervisor to v10.2.2
       hash: 3afbe138f115fa15611cb823caa6664dbb093a8b
       body: ''
