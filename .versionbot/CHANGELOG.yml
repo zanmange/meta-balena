@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update balena-engine to 18.9.10
+      hash: eb53c759b6c8c9df8638933a8c7c70c0a20c9a49
+      body: |
+        Includes feature to populate container environment with container id
+        variable and bug fix for tagging deltas on the fly.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-engine to 18.9.10
+        changelog-entry: Update balena-engine to 18.9.10
+        Signed-off-by: Robert Günzler <robertg@balena.io>
+        signed-off-by: Robert Günzler <robertg@balena.io>
+      author: Robert Günzler
+  version: 2.43.1
+  date: 2019-09-23T12:35:45.917Z
+- commits:
     - subject: Update NetworkManager to 1.20.2
       hash: bcb6d85cc3b75d2f41a64fc9a6e0e15b428040f1
       body: |
