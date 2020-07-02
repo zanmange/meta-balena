@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.52.1
+## (2020-07-02)
+
+* image-resin: Check that the docker image file will fit the rootfs partition [Alex Gonzalez]
+* resin-image: Break down the rootfs image size calculation [Alex Gonzalez]
+* image_types_resin: Add rootfs size calculation function [Alex Gonzalez]
+
 # v2.52.0
 ## (2020-06-30)
 
