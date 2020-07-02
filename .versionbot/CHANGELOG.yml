@@ -1,4 +1,59 @@
 - commits:
+    - subject: >-
+        image-resin: Check that the docker image file will fit the rootfs
+        partition
+      hash: 64ad4354fbad857f63aacbb49dae37aad033d457
+      body: >
+        Currently it is possible to build a docker image that wil then fail to
+
+        hup due to a lack of space on the inactive partition.
+
+
+        Add a task to check the docker image space against the available space
+        on
+
+        the root filesystem partition and fail the build if it's too big.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+    - subject: 'resin-image: Break down the rootfs image size calculation'
+      hash: 2767210f5120f1bfaba7fa1f35545f7a4800f434
+      body: |
+        Replace the IMAGE_ROOTFS_SIZE magic number with a calculation based on
+        the partition sizes on the balena image classes.
+
+        The rootfs size is calculated with the assumption of a total BalenaOS
+        size of 700M. This includes boot, state, rootA and rootB partitions. The
+        data partition will then grow to occupy the rest of the storage media.
+
+        Device integration layers can override this value if needed.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+    - subject: 'image_types_resin: Add rootfs size calculation function'
+      hash: 9e57852c5fb4b60b6e75e6f78b660fe89a29e13d
+      body: >
+        Instead of hardcoding the requested root filesystem value, let's explain
+
+        how the calculation is made with a python function that will adjust
+        based
+
+        on the sizes of other partitions.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+  version: 2.52.1
+  date: 2020-07-02T13:05:35.917Z
+- commits:
     - subject: Add compressed memory swap support
       hash: 157794a7ae5958b27152c642437c5c7fbe838364
       body: |
