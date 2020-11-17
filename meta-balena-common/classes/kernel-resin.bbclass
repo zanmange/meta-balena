@@ -99,6 +99,7 @@ RESIN_CONFIGS ?= " \
     uinput \
     no-debug-info \
     uprobes \
+    ipv6_mroute \
     "
 
 #
@@ -342,6 +343,11 @@ RESIN_CONFIGS_DEPS[ip6tables_nat] = " \
     "
 RESIN_CONFIGS[ip6tables_nat] = " \
     CONFIG_IP6_NF_NAT=m \
+    "
+
+RESIN_CONFIGS[ipv6_mroute] = " \
+    CONFIG_IPV6_MROUTE=y \
+    IPV6_MROUTE_MULTIPLE_TABLES=y \
     "
 
 RESIN_CONFIGS[seccomp] = " \
