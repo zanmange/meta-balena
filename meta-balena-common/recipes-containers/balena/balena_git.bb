@@ -14,7 +14,7 @@ inherit systemd go pkgconfig useradd
 BALENA_VERSION = "19.03.13-dev"
 BALENA_BRANCH= "a2o-migrate"
 
-SRCREV = "ecc3b02e7942fca607ad6b4429db6a5deee0017e"
+SRCREV = "8cb45b526448d46fe418fb28198c7405920c2cd9"
 SRC_URI = "\
 	git://github.com/balena-os/balena-engine.git;branch=${BALENA_BRANCH};destsuffix=git/src/import \
 	file://balena.service \
@@ -129,7 +129,6 @@ do_install() {
 	ln -sf balena-engine ${D}/${bindir}/balena-containerd-ctr
 	ln -sf balena-engine ${D}/${bindir}/balena-runc
 	ln -sf balena-engine ${D}/${bindir}/balena-proxy
-	ln -sf balena-engine ${D}/${bindir}/a2o-migrate
 
 	ln -sf balena-engine ${D}/${bindir}/balena-engine-daemon
 	ln -sf balena-engine ${D}/${bindir}/balena-engine-containerd
