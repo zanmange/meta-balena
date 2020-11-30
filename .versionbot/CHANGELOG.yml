@@ -1,4 +1,43 @@
 - commits:
+    - subject: 'image_types_resin: make rootfs labeling generic'
+      hash: 7d9e102d0e23bf2f953b876d1034bfacb510404b
+      body: ''
+      footer:
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Joseph Kogut
+      nested: []
+    - subject: 'image_types_resin: make agnostic to root fstype'
+      hash: fa93119d51b4a385d142ae33d0ea2a22a5e8892e
+      body: |
+        Build RESIN_HOSTAPP_IMG path using RESIN_ROOT_FSTYPE instead of assuming
+        the root is ext4.
+      footer:
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Joseph Kogut
+      nested: []
+    - subject: 'mkfs-hostapp-native: make agnostic to fstype'
+      hash: 5aede98e17a1b2cd23e73734e586b95765c3d92c
+      body: |
+        Remove assumptions about root fstype. Rename create to create.ext4,
+        mkfs.hostapp-ext4 to mkfs.hostapp, and add an argument to mkfs.hostapp
+        for fstype. Remove CMD from Dockerfile in favor of passing it as an
+        argument to docker run.
+      footer:
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+        Change-type: minor
+        change-type: minor
+      author: Joseph Kogut
+      nested: []
+  version: 2.63.0
+  date: 2020-11-30T21:37:19.986Z
+- commits:
     - subject: 'chrony: use a non-privileged UDP source port'
       hash: 447449808ef08577712db43b1042599ad4d7d23c
       body: |
