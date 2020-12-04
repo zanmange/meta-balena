@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'meta-balena-common: kernel-resin: enable task-accounting by default'
+      hash: b6dd347e1637e40aad028d914d06ea14bf093a2d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+    - subject: 'meta-balena-common: kernel-resin: create task-accounting config'
+      hash: 395a394177b722c854079523e25ddcb2384065ad
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.63.1
+  date: 2020-12-04T18:44:00.449Z
+- commits:
     - subject: 'zram-swap-init: adjust default to lesser of 50%/4GB'
       hash: 155af3386029a0e76b74ee60d58c32ba72073a82
       body: >
