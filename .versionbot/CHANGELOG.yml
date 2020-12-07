@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update codeowners
+      hash: fe7fc17bade8b7efccf0474bf8952804ac80007c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.63.2
+  date: 2020-12-07T19:39:02.015Z
+- commits:
     - subject: 'start-resin-supervisor: fix directory creation for ''balena start'''
       hash: ce9e4f211a2356a866edee5ca3dbada3faa27689
       body: |
