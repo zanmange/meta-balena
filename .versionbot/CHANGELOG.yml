@@ -1,4 +1,100 @@
 - commits:
+    - subject: 'hostapp-extensions-update: Adapt to supervisor managed extensions'
+      hash: c80b962d308aa4c88cf7278b5a72194735ccd88a
+      body: |
+        The supervisor will call upon the `update-hostapp-extensions` script to
+        perform the update of container extensions, but will still perform the
+        bookkeeping of the containers itself.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: The supervisor now updates from Balena's registry
+      hash: 61c3089a146648400240305fe5471eca60cd2957
+      body: |
+        The supervisor will now be pulled as any other extra container from an
+        app using the balenaCloud registry.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Changelog-entry: The supervisor now updates from Balena's registry
+        changelog-entry: The supervisor now updates from Balena's registry
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'resin-device-register: Use supervisor version label instead of tag'
+      hash: 3f97e7e0f75b3f9c13e9fe5fa4a97f977e83dc79
+      body: >
+        This is just a name change that reflects the wider change that the
+
+        supervisor is no longer fetched from dockerhub but from Balena's
+        registry.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Preload extra containers from Balena's registry
+      hash: 7f073f29c6279e72d214a05c2aba9874b445d6e2
+      body: |
+        Extra containers are those that are installed in the data partition, and
+        include the hostapp, supervisor, extensions and supervised system apps.
+        These extra containers are now all deployed as public apps and installed
+        from the Balena registry.
+
+        When preloaded they all need to be listed in apps.json so the supervisor
+        can manage them.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Changelog-entry: Preload extra containers from Balena's registry
+        changelog-entry: Preload extra containers from Balena's registry
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: >-
+        Revert "docker-disk: Add the host extension images to the data
+        partition"
+      hash: 3a66a5fd4c9a36151579b47c8ac48c6567f4a443
+      body: >
+        This reverts commit cd44a94cf1646828832070417a2deb9236b0f5ee.
+
+
+        The preloaded hostapp extensions are no longer recorded in the read-only
+        rootfs
+
+        but on the apps.json file.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: 'Revert "resin-vars: Parse the HOSTEXT_IMAGES variable from config.json"'
+      hash: 37b0a0b271b31e301f5b020fd3c4de9d782e5d48
+      body: |
+        This reverts commit 761f517f955f829e12b2c7f0a0f88830ded39e13.
+
+        The hostapp extension information will no longer be added to config.json
+        but to apps.json so that it can be managed by the supervisor.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.64.0
+  date: 2020-12-07T17:08:49.503Z
+- commits:
     - subject: 'start-resin-supervisor: fix directory creation for ''balena start'''
       hash: ce9e4f211a2356a866edee5ca3dbada3faa27689
       body: |
